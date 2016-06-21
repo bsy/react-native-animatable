@@ -169,7 +169,7 @@ export function createAnimatableComponent(component) {
       duration: PropTypes.number,
       direction: PropTypes.oneOf(['normal', 'reverse', 'alternate', 'alternate-reverse']),
       delay: PropTypes.number,
-      easing: PropTypes.oneOf(Object.keys(EASING_FUNCTIONS)),
+      easing: PropTypes.oneOf(['linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out']),
       iterationCount(props, propName, componentName) {
         const val = props[propName];
         if (val !== 'infinite' && !(typeof val === 'number' && val >= 1)) {
